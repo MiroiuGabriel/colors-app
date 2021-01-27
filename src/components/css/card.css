@@ -9,10 +9,10 @@
 	box-sizing: border-box;
 	text-align: center;
 }
-.card-container:hover .sidebar > div {
+.card-container:hover .sidebar {
 	visibility: visible;
 }
-.sidebar > div {
+.sidebar {
 	visibility: hidden;
 }
 .sidebar.show-last > div > div:last-child {

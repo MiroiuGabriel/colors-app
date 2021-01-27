@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/colors-app/static/css/main.69932c06.chunk.css",
+    "main.js": "/colors-app/static/js/main.b8c9ec69.chunk.js",
+    "main.js.map": "/colors-app/static/js/main.b8c9ec69.chunk.js.map",
+    "runtime-main.js": "/colors-app/static/js/runtime-main.82104647.js",
+    "runtime-main.js.map": "/colors-app/static/js/runtime-main.82104647.js.map",
+    "static/js/2.c2975b80.chunk.js": "/colors-app/static/js/2.c2975b80.chunk.js",
+    "static/js/2.c2975b80.chunk.js.map": "/colors-app/static/js/2.c2975b80.chunk.js.map",
+    "index.html": "/colors-app/index.html",
+    "static/css/main.69932c06.chunk.css.map": "/colors-app/static/css/main.69932c06.chunk.css.map",
+    "static/js/2.c2975b80.chunk.js.LICENSE.txt": "/colors-app/static/js/2.c2975b80.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.82104647.js",
+    "static/js/2.c2975b80.chunk.js",
+    "static/css/main.69932c06.chunk.css",
+    "static/js/main.b8c9ec69.chunk.js"
+  ]
+}

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { getRandomColor } from './functions/generateRandomColor';
 import Cards from './Cards';
 import clsx from 'clsx';

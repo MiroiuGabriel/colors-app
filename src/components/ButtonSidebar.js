@@ -7,16 +7,9 @@ import './css/buttonsidebar.css';
 import { useEffect } from 'react';
 
 const ButtonSidebar = ({ card, lockCard, removeCard, length, displayNotification }) => {
-	useEffect(async () => {
-		const onPermissionChanged = () => {
-			console.log('clipboard-write permission changed');
-		};
-
+	useEffect(() => {
 		const queryOpts = { name: 'clipboard-write', allowWithoutGesture: false };
-		const permissionStatus = await navigator.permissions.query(queryOpts);
-		permissionStatus.addEventListener('change', onPermissionChanged);
-
-		return () => permissionStatus.removeEventListener('change', onPermissionChanged);
+		navigator.permissions.query(queryOpts);
 	}, []);
 
 	const hideDiv = clsx('button tooltip mobile', length === 2 && 'hide-div');

@@ -22,10 +22,12 @@ const Card = ({ card, lockCard, removeCard, length, displayNotification, addColo
 			<h1 className="hex">{card.color.slice(1, card.color.length)}</h1>
 			<h2 className="hex-name">{namedColor.pantone[0].name}</h2>
 			<div className={addButtonClasses}>
-				<div className="add-button tooltip" onClick={() => addColor(card.id)}>
-					<AddButton />
-					<span className="tooltiptext">Add colors</span>
-				</div>
+				{length < 9 && (
+					<div className="add-button tooltip" onClick={() => addColor(card.id)}>
+						<AddButton />
+						<span className="tooltiptext">Add colors</span>
+					</div>
+				)}
 			</div>
 		</div>
 	);

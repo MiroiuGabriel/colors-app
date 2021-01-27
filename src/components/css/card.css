@@ -21,14 +21,14 @@
 .hex {
 	color: #fff;
 	user-select: none;
-	font-size: 45px;
+	font-size: 1.8rem;
 	font-weight: 600;
 	letter-spacing: 0.03em;
 }
 .hex-name {
 	color: #b99090;
 	margin-bottom: 70px;
-	font-size: 20px;
+	font-size: 1.5rem;
 	user-select: none;
 }
 

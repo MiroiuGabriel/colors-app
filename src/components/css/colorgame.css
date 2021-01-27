@@ -1,0 +1,19 @@
+.color-game-container {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+}
+.notification {
+	position: absolute;
+	width: fit-content;
+	background-color: #d2fbd0;
+	color: #11620b;
+	bottom: -150px;
+	left: 50%;
+	padding: 20px;
+	border-radius: 10px;
+	transition: all 0.2s ease-in-out;
+}
+.show-notification {
+	bottom: 30px;
+}

@@ -1,0 +1,95 @@
+.card-container {
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	box-sizing: border-box;
+	text-align: center;
+}
+.card-container:hover .sidebar > div {
+	visibility: visible;
+}
+.sidebar > div {
+	visibility: hidden;
+}
+.sidebar.show-last > div > div:last-child {
+	visibility: visible;
+}
+.hex {
+	color: #fff;
+	user-select: none;
+	font-size: 45px;
+	font-weight: 600;
+	letter-spacing: 0.03em;
+}
+.hex-name {
+	color: #b99090;
+	margin-bottom: 70px;
+	font-size: 20px;
+	user-select: none;
+}
+
+.add-button-trigger {
+	width: 50px;
+	height: 100%;
+	position: absolute;
+	right: -25px;
+	display: flex;
+	justify-content: center;
+}
+
+.add-button-trigger:hover .add-button {
+	opacity: 1;
+}
+
+.add-button {
+	opacity: 0;
+	transition: opacity 0.3s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 50%;
+	background-color: #fff;
+	font-size: 30px;
+	border-radius: 50%;
+	padding: 6px;
+	box-shadow: inset rgba(0, 0, 0, 0.15) 0 0 0 1px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.add-button:hover {
+	box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 0 1px;
+}
+
+.card-container:last-child .add-button-trigger {
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+	.card-container {
+		flex-flow: row;
+		justify-content: space-between;
+		height: 25%;
+		/* trebuie 100% */
+		visibility: visible;
+		order: 1;
+	}
+	.sidebar {
+		order: 2;
+	}
+	.hex {
+		margin: 0;
+		margin-left: 10px;
+		font-size: 16px;
+	}
+
+	.hex-name {
+		margin-left: 10px;
+		position: absolute;
+	}
+}

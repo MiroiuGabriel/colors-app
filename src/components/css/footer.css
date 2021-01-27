@@ -1,0 +1,43 @@
+.footer-container {
+	display: flex;
+	padding: 10px;
+	background-color: #fff;
+	justify-content: center;
+}
+
+.generator-button {
+	background-color: #fff;
+	padding: 12px;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	border-radius: 8px;
+	box-shadow: inset rgba(0, 0, 0, 0.15) 0 0 0 1px;
+	display: none;
+}
+
+.generator-button:hover {
+	box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 0 1px;
+}
+
+@media only screen and (max-width: 600px), screen and (max-height: 400px) {
+	.generator-button {
+		display: flex;
+	}
+
+	.add-button-trigger {
+		display: none;
+	}
+}
+
+@media only screen and (max-height: 400px) {
+	.footer-container {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+	.card-container {
+		padding-bottom: 75px;
+	}
+}

@@ -4,9 +4,10 @@ import clsx from 'clsx';
 import { IoMdAdd as AddButton } from 'react-icons/io';
 import './css/card.css';
 
-const Card = ({ card, lockCard, removeCard, length, displayNotification, addColor }) => {
+const Card = ({ card, lockCard, removeCard, length, displayNotification, addColor, isLast }) => {
 	const showLast = clsx('sidebar', card.isLocked && 'show-last');
-	let namedColor = namer(card.color, { pick: ['pantone'] });
+	const namedColor = namer(card.color, { pick: ['pantone'] });
+	const addButtonClasses = clsx('add-button-trigger', isLast && 'hide-div');
 	return (
 		<div style={{ backgroundColor: card.color }} className="card-container">
 			<div className={showLast}>
@@ -20,7 +21,7 @@ const Card = ({ card, lockCard, removeCard, length, displayNotification, addColo
 			</div>
 			<h1 className="hex">{card.color.slice(1, card.color.length)}</h1>
 			<h2 className="hex-name">{namedColor.pantone[0].name}</h2>
-			<div className="add-button-trigger">
+			<div className={addButtonClasses}>
 				<div className="add-button tooltip" onClick={() => addColor(card.id)}>
 					<AddButton />
 					<span className="tooltiptext">Add colors</span>

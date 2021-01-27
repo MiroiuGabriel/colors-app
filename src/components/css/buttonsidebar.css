@@ -85,6 +85,10 @@
 	.mobile {
 		visibility: hidden;
 	}
+
+	.sidebar {
+		margin-right: 15px;
+	}
 }
 
 @media only screen and (max-height: 400px) {

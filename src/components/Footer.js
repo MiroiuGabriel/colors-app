@@ -1,5 +1,5 @@
 import './css/footer.css';
-import clsx from 'clsx';
+
 const Footer = ({ shuffleAll }) => {
 	return (
 		<div className="footer-container">

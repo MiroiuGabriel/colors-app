@@ -9,7 +9,7 @@ import { useEffect } from 'react';
 const ButtonSidebar = ({ card, lockCard, removeCard, length, displayNotification }) => {
 	useEffect(async () => {
 		const onPermissionChanged = () => {
-			console.log('changed');
+			console.log('clipboard-write permission changed');
 		};
 
 		const queryOpts = { name: 'clipboard-write', allowWithoutGesture: false };

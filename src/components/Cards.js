@@ -3,7 +3,7 @@ import Card from './Card';
 import Footer from './Footer';
 import './css/cards.css';
 
-const Cards = ({ cards, shuffleAll, lockCard, removeCard, length, displayNotification, addColor }) => {
+const Cards = ({ cards, shuffleAll, lockCard, removeCard, displayNotification, addColor }) => {
 	const divRef = useRef(null);
 
 	useEffect(() => {
@@ -17,15 +17,16 @@ const Cards = ({ cards, shuffleAll, lockCard, removeCard, length, displayNotific
 			className="cards-container"
 			onKeyPress={ev => ev.code === 'Space' && shuffleAll()}
 		>
-			{cards.map(card => (
+			{cards.map((card, index) => (
 				<Card
 					key={card.id}
 					card={card}
 					lockCard={lockCard}
 					removeCard={removeCard}
-					length={length}
+					length={cards.length}
 					displayNotification={displayNotification}
 					addColor={addColor}
+					isLast={index === cards.length - 1}
 				/>
 			))}
 			<Footer shuffleAll={shuffleAll} />

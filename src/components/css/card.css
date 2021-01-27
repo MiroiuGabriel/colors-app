@@ -62,12 +62,16 @@
 	cursor: pointer;
 }
 
+.hide-div {
+	display: none;
+}
+
 .add-button:hover {
 	box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 0 1px;
 }
 
 .card-container:last-child .add-button-trigger {
-	display: none;
+	display: none !important;
 }
 
 @media only screen and (max-width: 600px) {
@@ -75,7 +79,6 @@
 		flex-flow: row;
 		justify-content: space-between;
 		height: 25%;
-		/* trebuie 100% */
 		visibility: visible;
 		order: 1;
 	}

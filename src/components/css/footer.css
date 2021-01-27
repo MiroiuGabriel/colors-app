@@ -1,5 +1,5 @@
 .footer-container {
-	display: flex;
+	display: none;
 	padding: 10px;
 	background-color: #fff;
 	justify-content: center;
@@ -22,6 +22,10 @@
 
 @media only screen and (max-width: 600px), screen and (max-height: 400px) {
 	.generator-button {
+		display: flex;
+	}
+
+	.footer-container {
 		display: flex;
 	}
 

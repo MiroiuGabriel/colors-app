@@ -2,7 +2,7 @@
 	"name": "colors-app",
 	"version": "0.1.0",
 	"private": true,
-	"homepage": "/",
+	"homepage": "https://miroiugabriel.github.io/colors-app",
 	"dependencies": {
 		"clsx": "^1.1.1",
 		"color-namer": "^1.4.0",

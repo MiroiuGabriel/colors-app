@@ -53,8 +53,10 @@ const ColorGame = () => {
 		setCards(cards.filter(card => card.id !== id));
 	};
 	const displayNotification = () => {
-		setShowNotification(true);
-		setTimeout(() => setShowNotification(false), 2000);
+		if (!showNotification) {
+			setShowNotification(true);
+			setTimeout(() => setShowNotification(false), 2000);
+		}
 	};
 	const addColor = id => {
 		if (cards.length < 10) {

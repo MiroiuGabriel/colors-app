@@ -4,6 +4,7 @@
 	height: 100%;
 }
 .notification {
+	user-select: none;
 	position: absolute;
 	width: fit-content;
 	background-color: #d2fbd0;
@@ -20,6 +21,6 @@
 }
 @media only screen and (max-height: 960px) {
 	.show-notification {
-		bottom: 50px;
+		bottom: 60px;
 	}
 }

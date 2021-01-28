@@ -9,8 +9,8 @@
 	background: transparent;
 	border: none;
 	outline: none;
-	/* opacity: 30%; */
-	opacity: 100%;
+	color: white;
+	/* fix  */
 	margin-bottom: 30px;
 	color: #fff;
 	transition: all 0.2s ease-in-out;
@@ -19,7 +19,8 @@
 	visibility: hidden;
 }
 .button:hover {
-	opacity: 100%;
+	color: black;
+	/* fix  */
 }
 .button.highlight {
 	color: white;

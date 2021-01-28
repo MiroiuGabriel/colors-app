@@ -98,3 +98,17 @@
 		position: absolute;
 	}
 }
+@media only screen and (max-width: 1140px) {
+	.hex-name {
+		font-size: 1rem;
+	}
+}
+@media only screen and (max-height: 556px) {
+	.hex {
+		font-size: 0.7rem;
+	}
+	.hex-name {
+		margin-top: 30px;
+		font-size: 0.8rem;
+	}
+}

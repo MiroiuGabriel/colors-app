@@ -11,16 +11,6 @@
 }
 
 .card-container:hover .sidebar {
-	display: initial;
-}
-.sidebar {
-	display: none;
-}
-.sidebar.show-last > div > div:last-child {
-	display: initial;
-}
-
-/* .card-container:hover .sidebar {
 	visibility: visible;
 }
 .sidebar {
@@ -28,7 +18,7 @@
 }
 .sidebar.show-last > div > div:last-child {
 	visibility: visible;
-} */
+}
 
 .hex {
 	color: #fff;

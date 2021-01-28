@@ -17,7 +17,7 @@
 .show-notification {
 	bottom: 30px;
 }
-@media only screen and (max-height: 740px) {
+@media only screen and (max-height: 820px) {
 	.show-notification {
 		bottom: 50px;
 	}

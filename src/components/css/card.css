@@ -9,7 +9,7 @@
 	box-sizing: border-box;
 	text-align: center;
 }
-.card-container:hover .sidebar {
+/* .card-container:hover .sidebar {
 	visibility: visible;
 }
 .sidebar {
@@ -17,7 +17,7 @@
 }
 .sidebar.show-last > div > div:last-child {
 	visibility: visible;
-}
+} */
 .hex {
 	color: #fff;
 	user-select: none;

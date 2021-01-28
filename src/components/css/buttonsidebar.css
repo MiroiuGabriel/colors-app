@@ -9,7 +9,8 @@
 	background: transparent;
 	border: none;
 	outline: none;
-	opacity: 30%;
+	/* opacity: 30%; */
+	opacity: 100%;
 	margin-bottom: 30px;
 	color: #fff;
 	transition: all 0.2s ease-in-out;

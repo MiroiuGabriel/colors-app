@@ -1,7 +1,7 @@
-import { IoRemove as RemoveIcon } from 'react-icons/io5';
-import { MdContentCopy as Copy } from 'react-icons/md';
-import { AiFillLock as Locked } from 'react-icons/ai';
-import { AiFillUnlock as Unlocked } from 'react-icons/ai';
+import { CgRemove as RemoveIcon } from 'react-icons/cg';
+import { FiCopy as Copy } from 'react-icons/fi';
+import { FaLock as Locked } from 'react-icons/fa';
+import { FaUnlock as Unlocked } from 'react-icons/fa';
 import clsx from 'clsx';
 import './css/buttonsidebar.css';
 import { useEffect } from 'react';

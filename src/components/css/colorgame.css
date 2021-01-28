@@ -16,6 +16,7 @@
 }
 .show-notification {
 	bottom: 30px;
+	right: 10px;
 }
 @media only screen and (max-height: 960px) {
 	.show-notification {

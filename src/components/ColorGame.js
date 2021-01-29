@@ -27,6 +27,7 @@ const initalCards = [
 	},
 ];
 
+let waitForShuffle = false;
 const savedCards = JSON.parse(window.localStorage.getItem('Cards'));
 
 const ColorGame = () => {
@@ -37,14 +38,18 @@ const ColorGame = () => {
 	}, [cards]);
 
 	const shuffleAll = () => {
-		setCards(
-			cards.map(card => {
-				if (card.isLocked) {
-					return card;
-				}
-				return { ...card, color: getRandomColor() };
-			})
-		);
+		if (!waitForShuffle) {
+			setCards(
+				cards.map(card => {
+					if (card.isLocked) {
+						return card;
+					}
+					return { ...card, color: getRandomColor() };
+				})
+			);
+			waitForShuffle = true;
+			setTimeout(() => (waitForShuffle = false), 100);
+		}
 	};
 	const lockCard = id => {
 		setCards(cards.map(card => (card.id === id ? { ...card, isLocked: !card.isLocked } : card)));

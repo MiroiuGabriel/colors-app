@@ -4,11 +4,12 @@ import { AiFillLock as Locked } from 'react-icons/ai';
 import { AiFillUnlock as Unlocked } from 'react-icons/ai';
 import clsx from 'clsx';
 import './css/buttonsidebar.css';
+import { ButtonSideBarProps } from './Types/Types';
 import { useEffect } from 'react';
 
-const ButtonSidebar = ({ card, lockCard, removeCard, length, displayNotification }) => {
+const ButtonSidebar = ({ card, lockCard, removeCard, length, displayNotification }: ButtonSideBarProps) => {
 	useEffect(() => {
-		const queryOpts = { name: 'clipboard-write', allowWithoutGesture: false };
+		const queryOpts: any = { name: 'clipboard-write', allowWithoutGesture: false };
 		navigator.permissions.query(queryOpts);
 	}, []);
 
@@ -26,8 +27,6 @@ const ButtonSidebar = ({ card, lockCard, removeCard, length, displayNotification
 					if (navigator.clipboard) {
 						await navigator.clipboard.writeText(card.color);
 						displayNotification();
-					} else {
-						await navigator.permissions.request('clipboard-write');
 					}
 				}}
 			>

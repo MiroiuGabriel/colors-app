@@ -1,19 +1,20 @@
 import { useEffect, useRef } from 'react';
 import Card from './Card';
 import Footer from './Footer';
+import { CardsProps } from './Types/Types';
 import './css/cards.css';
 
-const Cards = ({ cards, shuffleAll, lockCard, removeCard, displayNotification, addColor }) => {
-	const divRef = useRef(null);
+const Cards = ({ cards, shuffleAll, lockCard, removeCard, displayNotification, addColor }: CardsProps) => {
+	const divRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
-		divRef.current.focus();
+		divRef.current?.focus();
 	}, []);
 
 	return (
 		<div
 			ref={divRef}
-			tabIndex="0"
+			tabIndex={0}
 			className="cards-container"
 			onKeyPress={ev => ev.code === 'Space' && shuffleAll()}
 		>

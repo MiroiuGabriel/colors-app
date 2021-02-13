@@ -2,9 +2,10 @@ import ButtonSidebar from './ButtonSidebar';
 import namer from 'color-namer';
 import clsx from 'clsx';
 import { IoMdAdd as AddButton } from 'react-icons/io';
+import { CardProps } from './Types/Types';
 import './css/card.css';
 
-const Card = ({ card, lockCard, removeCard, length, displayNotification, addColor, isLast }) => {
+const Card = ({ card, lockCard, removeCard, length, displayNotification, addColor, isLast }: CardProps) => {
 	const showLast = clsx('sidebar', card.isLocked && 'show-last');
 	const namedColor = namer(card.color, { pick: ['pantone'] });
 	const addButtonClasses = clsx('add-button-trigger', isLast && 'hide-div');

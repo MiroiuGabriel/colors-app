@@ -2,9 +2,10 @@ import { useState, useEffect } from 'react';
 import { getRandomColor } from './functions/generateRandomColor';
 import Cards from './Cards';
 import clsx from 'clsx';
+import { CardType } from './Types/Types';
 import './css/colorgame.css';
 
-const initalCards = [
+const initalCards: CardType[] = [
 	{
 		id: 1,
 		color: getRandomColor(),
@@ -28,7 +29,7 @@ const initalCards = [
 ];
 
 let waitForShuffle = false;
-const savedCards = JSON.parse(window.localStorage.getItem('Cards'));
+const savedCards: CardType[] | null = JSON.parse(window.localStorage.getItem('Cards') || 'null');
 
 const ColorGame = () => {
 	const [cards, setCards] = useState(savedCards || initalCards);
@@ -51,10 +52,10 @@ const ColorGame = () => {
 			setTimeout(() => (waitForShuffle = false), 100);
 		}
 	};
-	const lockCard = id => {
+	const lockCard = (id: number) => {
 		setCards(cards.map(card => (card.id === id ? { ...card, isLocked: !card.isLocked } : card)));
 	};
-	const removeCard = id => {
+	const removeCard = (id: number) => {
 		setCards(cards.filter(card => card.id !== id));
 	};
 	const displayNotification = () => {
@@ -63,7 +64,7 @@ const ColorGame = () => {
 			setTimeout(() => setShowNotification(false), 2000);
 		}
 	};
-	const addColor = id => {
+	const addColor = (id: number) => {
 		if (cards.length < 10) {
 			let newCards = [...cards];
 			newCards.splice(id, 0, { id: Math.floor(Math.random() * 1000), color: getRandomColor(), isLocked: false });

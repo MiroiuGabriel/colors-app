@@ -1,6 +1,6 @@
-import './components/ColorGame.js';
+import './components/ColorGame';
 import './App.css';
-import ColorGame from './components/ColorGame.js';
+import ColorGame from './components/ColorGame';
 
 const App = () => {
 	return <ColorGame />;
